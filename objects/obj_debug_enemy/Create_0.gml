@@ -17,7 +17,6 @@ my_scale = hp_max/1000
 
 
 
-
 //________________________________
 // Don't change these :)
 hp = hp_max
