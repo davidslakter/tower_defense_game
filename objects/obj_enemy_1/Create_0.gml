@@ -34,3 +34,5 @@ hp_draw_h = 12*my_scale
 
 hp_draw_x = x - hp_draw_w/2
 hp_draw_y = y + 40*my_scale
+
+alarm[0] = random_range(10* room_speed, 30*room_speed)
