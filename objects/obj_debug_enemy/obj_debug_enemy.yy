@@ -6,8 +6,8 @@
   "solid": false,
   "visible": true,
   "spriteMaskId": {
-    "name": "spr_bullet",
-    "path": "sprites/spr_bullet/spr_bullet.yy",
+    "name": "spr_cannon",
+    "path": "sprites/spr_cannon/spr_cannon.yy",
   },
   "persistent": false,
   "parentObjectId": {

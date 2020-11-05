@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_tower",
-    "path": "sprites/spr_tower/spr_tower.yy",
+    "name": "spr_rapid_tower",
+    "path": "sprites/spr_rapid_tower/spr_rapid_tower.yy",
   },
   "solid": false,
   "visible": true,
