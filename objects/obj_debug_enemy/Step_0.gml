@@ -16,6 +16,6 @@ hp_draw_y = y + 32*my_scale
 
 if hp < 1{
 	effect_create_above(ef_explosion,x,y,floor(my_scale),c_red)
-
+	PLAYER_COINS += coins_earned
 	instance_destroy()
 }
