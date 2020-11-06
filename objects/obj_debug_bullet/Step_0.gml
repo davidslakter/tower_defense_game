@@ -1,13 +1,22 @@
+if (my_tower.shot_splash)
+{
+	sprite_index = spr_cannon;
+}
+
 if follow_enemy{
 	if instance_exists(my_target){
 		targ_x = my_target.x
 		targ_y = my_target.y
+		
+		direction = point_direction(x, y, targ_x, targ_y);
+		image_angle = direction; 
 	}else{
 		follow_enemy = false
 	}
 }
 hspd = lengthdir_x(mspd,point_direction(x,y,targ_x,targ_y)) *GAME_SPD
 vspd = lengthdir_y(mspd,point_direction(x,y,targ_x,targ_y)) *GAME_SPD
+
 
 if miss_anim_on{
 	y -= miss_anim_spd
@@ -62,12 +71,13 @@ if shot_hit{
 		shot_hit = false
 	}else
 	if shot_crit{
-		effect_create_above(ef_smoke,x,y,1,c_teal)
-		effect_create_above(ef_star,x,y,1,c_yellow)
 		my_target.hp -= _dmg * my_tower.shot_crit_mult;
 		
 		if (my_tower.shot_splash == true)
 		{
+			effect_create_above(ef_smoke,x,y,1,c_white)
+			effect_create_above(ef_star,x,y,1,c_red)
+			
 			var i;
 		
 			for (i = 1; i < 3; i++)
@@ -83,12 +93,12 @@ if shot_hit{
 		
 		instance_destroy()
 	}else{
-		effect_create_above(ef_smoke,x,y,1,c_teal)
-		
 		my_target.hp -= _dmg;
 		
 		if (my_tower.shot_splash == true)
 		{
+			effect_create_above(ef_smoke,x,y,1,c_dkgray)
+			
 			var i;
 		
 			for (i = 1; i < 3; i++)
