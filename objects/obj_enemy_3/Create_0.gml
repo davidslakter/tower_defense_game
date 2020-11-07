@@ -14,7 +14,7 @@ my_dmg_max = 3	// maximum dmg
 // make my_scale = 1 if you don't want the sprite to scale w/ hp
 my_scale = hp_max/1000		
 
-
+coins_earned = 2
 
 
 

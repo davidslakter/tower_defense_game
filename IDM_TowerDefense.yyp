@@ -21,6 +21,7 @@
     {"id":{"name":"snd_spider3","path":"sounds/snd_spider3/snd_spider3.yy",},"order":3,},
     {"id":{"name":"obj_debug_enemy_gen","path":"objects/obj_debug_enemy_gen/obj_debug_enemy_gen.yy",},"order":2,},
     {"id":{"name":"snd_cannonShoot","path":"sounds/snd_cannonShoot/snd_cannonShoot.yy",},"order":6,},
+    {"id":{"name":"spr_coin","path":"sprites/spr_coin/spr_coin.yy",},"order":13,},
     {"id":{"name":"spr_splash_tower","path":"sprites/spr_splash_tower/spr_splash_tower.yy",},"order":11,},
     {"id":{"name":"spr_multi_tower","path":"sprites/spr_multi_tower/spr_multi_tower.yy",},"order":9,},
     {"id":{"name":"spr_tower_2","path":"sprites/spr_tower_2/spr_tower_2.yy",},"order":4,},

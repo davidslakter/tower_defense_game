@@ -15,7 +15,7 @@ my_dmg_max = 3	// maximum dmg
 my_scale = hp_max/1000		
 
 
-
+coins_earned = 5
 
 
 //________________________________
