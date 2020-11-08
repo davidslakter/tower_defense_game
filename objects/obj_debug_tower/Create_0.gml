@@ -32,6 +32,8 @@ tower_bullet_type = obj_debug_bullet	// change this to whatever kind of bullet t
 //	Don't change these  :)
 depth = -y
 
+tower_placed = false
+
 my_target = noone
 have_target = false
 

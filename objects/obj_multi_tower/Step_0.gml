@@ -1,97 +1,107 @@
-if !WAVE_START{
-	have_target = false	
+
+if (!tower_placed){
+	x = mouse_x
+	y = mouse_y
 }
 
-if !shot_ok{	// timer between bullets
-	shot_cooldown_timer -= 1*GAME_SPD
-	if shot_cooldown_timer<=0{	
-		shot_ok = true	
+
+else {
+	if !WAVE_START{
+		have_target = false	
 	}
-}
 
-if !atk_ok{		// timer for reloading
-	atk_reload_timer -= 1*GAME_SPD
-	if atk_reload_timer<=0{	
-		atk_ok = true
-		shot_num = shot_num_max
-	}
-}
-
-
-shot_dmg_bonus_apply = (1-(PLAYER_HP/PLAYER_HP_MAX))*10*shot_dmg_bonus
-
-if have_target
-{
-	
-	/*
-	if instance_exists(my_target){
-		if atk_ok{
-			if shot_ok{
-				if shot_num > 0{
-					doShot(id,x,y,my_target,my_target.x,my_target.y)
-					shot_num -= 1
-					shot_cooldown_timer = shot_cooldown
-					shot_ok = false
-					if shot_num < 1{
-						atk_ok = false
-						atk_reload_timer = atk_reload
-					}
-				}
-			}
+	if !shot_ok{	// timer between bullets
+		shot_cooldown_timer -= 1*GAME_SPD
+		if shot_cooldown_timer<=0{	
+			shot_ok = true	
 		}
-		
-		if point_distance(x,y,my_target.x,my_target.y) > atk_range{
-			have_target = false	
-		}
-	}else{
-		my_target = noone
-		have_target = false
 	}
-	*/
-	
-	if (instance_exists(my_target))
+
+	if !atk_ok{		// timer for reloading
+		atk_reload_timer -= 1*GAME_SPD
+		if atk_reload_timer<=0{	
+			atk_ok = true
+			shot_num = shot_num_max
+		}
+	}
+
+
+	shot_dmg_bonus_apply = (1-(PLAYER_HP/PLAYER_HP_MAX))*10*shot_dmg_bonus
+
+	if have_target
 	{
-		if (atk_ok)
-		{
-			if (shot_ok)
-			{
-				if (shot_num > 0)
-				{
-					var i;
-					for (i = 1; i <= maxNumTargets; i++)
-					{
-						closestEnemy = instance_nth_nearest(x, y, obj_debug_enemy, round(i));
-						
-						if (collision_circle(x, y, atk_range, closestEnemy, false, false))
-						{
-							doShot(id, x, y, closestEnemy, closestEnemy.x, closestEnemy.y);
+	
+		/*
+		if instance_exists(my_target){
+			if atk_ok{
+				if shot_ok{
+					if shot_num > 0{
+						doShot(id,x,y,my_target,my_target.x,my_target.y)
+						shot_num -= 1
+						shot_cooldown_timer = shot_cooldown
+						shot_ok = false
+						if shot_num < 1{
+							atk_ok = false
+							atk_reload_timer = atk_reload
 						}
 					}
-					
-					shot_num -= 1;
-					shot_cooldown_timer = shot_cooldown;
-					shot_ok = false;
-					if (shot_num < 1)
+				}
+			}
+		
+			if point_distance(x,y,my_target.x,my_target.y) > atk_range{
+				have_target = false	
+			}
+		}else{
+			my_target = noone
+			have_target = false
+		}
+		*/
+	
+		if (instance_exists(my_target))
+		{
+			if (atk_ok)
+			{
+				if (shot_ok)
+				{
+					if (shot_num > 0)
 					{
-						atk_ok = false;
-						atk_reload_timer = atk_reload;
+						var i;
+						for (i = 1; i <= maxNumTargets; i++)
+						{
+							closestEnemy = instance_nth_nearest(x, y, obj_debug_enemy, round(i));
+						
+							if (collision_circle(x, y, atk_range, closestEnemy, false, false))
+							{
+								doShot(id, x, y, closestEnemy, closestEnemy.x, closestEnemy.y);
+								audio_play_sound(snd_arrowFire, 1, false)
+							}
+						}
+					
+						shot_num -= 1;
+						shot_cooldown_timer = shot_cooldown;
+						shot_ok = false;
+						if (shot_num < 1)
+						{
+							atk_ok = false;
+							atk_reload_timer = atk_reload;
+						}
 					}
 				}
 			}
-		}
 		
-	}
-	else 
-	{
-		have_target = false;
-	}
+		}
+		else 
+		{
+			have_target = false;
+		}
 	
-}
-else
-{
-	if collision_circle(x,y,atk_range,obj_debug_enemy,false,false)
+	}
+	else
 	{
-		my_target = instance_nearest(x,y,obj_debug_enemy)
-		have_target = true
-	}	
+		if collision_circle(x,y,atk_range,obj_debug_enemy,false,false)
+		{
+			my_target = instance_nearest(x,y,obj_debug_enemy)
+			have_target = true
+		}	
+	}
 }

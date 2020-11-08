@@ -20,7 +20,7 @@ crit_chance = 0		// the % chance to critically hit
 shot_splash = false	// if the bullet does damage in an area
 
 shot_dmg_min = 20	// minimum damage of bullet
-shot_dmg_max = 20	// maximum damage of bullet
+shot_dmg_max = 30	// maximum damage of bullet
 shot_crit_mult = 2	// number damage is multiplied by on crit
 
 shot_dmg_bonus = 10		// extra dmg per 10% hp missing
@@ -33,6 +33,8 @@ maxNumTargets = 3;
 //________________________________
 //	Don't change these  :)
 depth = -y
+
+tower_placed = false
 
 my_target = noone
 have_target = false

@@ -1,5 +1,5 @@
 
-if show_atk_range{
+if tower_placed and show_atk_range{
 	draw_set_color(c_yellow)
 	draw_set_alpha(0.02)
 	draw_circle(x,y,atk_range,false)

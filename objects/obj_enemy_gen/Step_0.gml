@@ -36,6 +36,5 @@ if keyboard_check_pressed(vk_space){
 		WAVE_START = true
 		gen_wave = true	
 		PLAYER_HP = PLAYER_HP_MAX
-		obj_debug_tower.alarm[1]=1	// reloads ammo
 	}
 }
