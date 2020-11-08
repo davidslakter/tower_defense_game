@@ -34,6 +34,8 @@ maxNumTargets = 1;
 //	Don't change these  :)
 depth = -y
 
+tower_placed = false
+
 my_target = noone
 have_target = false
 

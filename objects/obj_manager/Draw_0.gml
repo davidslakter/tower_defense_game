@@ -20,3 +20,4 @@ else if (room == rm_end)
 	draw_text(room_width/2 - 50, room_height/2 - 25, "Game Over");
 	draw_text(room_width/2 - 75, room_height/2 + 25, "Press Enter to Restart");
 }
+
