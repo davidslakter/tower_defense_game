@@ -5,12 +5,12 @@ globalvar WAVE_START;
 WAVE_START = false
 
 globalvar NUM_ENEMY;
-NUM_ENEMY = 12
+NUM_ENEMY = 15
 
 enemy_to_gen = 0
 gen_wave = false
 gen_timer = 0
-time_btwn_gen = 80
+time_btwn_gen = 75
 
 gen_x = room_width/2
 gen_y = -32
