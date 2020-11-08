@@ -1,6 +1,7 @@
 {
   "resources": [
     {"id":{"name":"instance_nth_nearest","path":"scripts/instance_nth_nearest/instance_nth_nearest.yy",},"order":2,},
+    {"id":{"name":"rm_start","path":"rooms/rm_start/rm_start.yy",},"order":2,},
     {"id":{"name":"snd_arrowFire","path":"sounds/snd_arrowFire/snd_arrowFire.yy",},"order":5,},
     {"id":{"name":"obj_rapid_tower","path":"objects/obj_rapid_tower/obj_rapid_tower.yy",},"order":1,},
     {"id":{"name":"shotCollide","path":"scripts/shotCollide/shotCollide.yy",},"order":1,},
@@ -16,6 +17,7 @@
     {"id":{"name":"path_enemy_1","path":"paths/path_enemy_1/path_enemy_1.yy",},"order":0,},
     {"id":{"name":"obj_bullet_1","path":"objects/obj_bullet_1/obj_bullet_1.yy",},"order":4,},
     {"id":{"name":"spr_arrow","path":"sprites/spr_arrow/spr_arrow.yy",},"order":12,},
+    {"id":{"name":"rm_end","path":"rooms/rm_end/rm_end.yy",},"order":3,},
     {"id":{"name":"spr_cannon","path":"sprites/spr_cannon/spr_cannon.yy",},"order":2,},
     {"id":{"name":"spr_spider_egg","path":"sprites/spr_spider_egg/spr_spider_egg.yy",},"order":6,},
     {"id":{"name":"snd_spider3","path":"sounds/snd_spider3/snd_spider3.yy",},"order":3,},
@@ -68,8 +70,10 @@
     "children": [],
   },
   "RoomOrder": [
+    {"name":"rm_start","path":"rooms/rm_start/rm_start.yy",},
     {"name":"rm_game","path":"rooms/rm_game/rm_game.yy",},
     {"name":"rm_debug","path":"rooms/rm_debug/rm_debug.yy",},
+    {"name":"rm_end","path":"rooms/rm_end/rm_end.yy",},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":1,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},
